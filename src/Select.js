@@ -272,7 +272,7 @@ const Select = React.createClass({
 		this.input.focus();
 
 		console.log('!focus!2')
-		
+
 		if (this.props.openAfterFocus) {
 			this.setState({
 				isOpen: true,
@@ -876,6 +876,7 @@ const Select = React.createClass({
 						aria-expanded={isOpen}
 						aria-owns={isOpen ? this._instancePrefix + '-list' : this._instancePrefix + '-value'}
 						aria-activedescendant={isOpen ? this._instancePrefix + '-option-' + focusedOptionIndex : this._instancePrefix + '-value'}
+						aria-label={this.props['aria-label']}
 						className={className}
 						tabIndex={this.props.tabIndex || 0}
 						onBlur={this.handleInputBlur}
