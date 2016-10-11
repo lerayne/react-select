@@ -1493,6 +1493,15 @@ var Select = _react2['default'].createClass({
 				}
 				this.focusStartOption();
 				break;
+			case 32:
+				// space
+				console.log('space!');
+				if (!this.state.isOpen) {
+					this.setState({
+						isOpen: true
+					});
+				}
+				break;
 			default:
 				return;
 		}
