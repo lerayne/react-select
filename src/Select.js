@@ -1092,7 +1092,9 @@ const Select = React.createClass({
 		return (
 			<div ref={ref => this.wrapper = ref}
 				 className={className}
-				 style={this.props.wrapperStyle}>
+				 style={this.props.wrapperStyle}
+				 onFocus={this.focus}
+			>
 				{this.renderHiddenField(valueArray)}
 				<div ref={ref => this.control = ref}
 					className="Select-control"
