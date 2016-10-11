@@ -248,7 +248,7 @@ const Select = React.createClass({
 			if (!document.addEventListener && document.attachEvent) {
 				document.attachEvent('ontouchstart', this.handleTouchOutside);
 			} else {
-				document.addEventListener('touchstart', this.handleTouchOutside);				
+				document.addEventListener('touchstart', this.handleTouchOutside);
 			}
 		} else {
 			if (!document.removeEventListener && document.detachEvent) {
@@ -520,6 +520,14 @@ const Select = React.createClass({
 				}
 				this.focusStartOption();
 			break;
+			case 32: // space
+				console.log('space!')
+				if (!this.state.isOpen) {
+					this.setState({
+						isOpen: true
+					});
+				}
+				break;
 			default: return;
 		}
 		event.preventDefault();
