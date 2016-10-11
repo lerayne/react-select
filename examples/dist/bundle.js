@@ -636,7 +636,7 @@ var Option = _react2['default'].createClass({
 
 		var className = (0, _classnames2['default'])(this.props.className, option.className);
 
-		return option.disabled ? _react2['default'].createElement(
+		var element = option.disabled ? _react2['default'].createElement(
 			'div',
 			{ className: className,
 				onMouseDown: this.blockEvent,
@@ -659,6 +659,10 @@ var Option = _react2['default'].createClass({
 			},
 			this.props.children
 		);
+
+		console.log('Option', element);
+
+		return element;
 	}
 });
 

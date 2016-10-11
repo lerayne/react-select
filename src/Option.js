@@ -69,7 +69,7 @@ const Option = React.createClass({
 		var { option, instancePrefix, optionIndex } = this.props;
 		var className = classNames(this.props.className, option.className);
 
-		return option.disabled ? (
+		const element = option.disabled ? (
 			<div className={className}
 				onMouseDown={this.blockEvent}
 				onClick={this.blockEvent}>
@@ -92,6 +92,10 @@ const Option = React.createClass({
 				 {this.props.children}
 			</div>
 		);
+		
+		console.log('Option', element);
+
+		return element
 	}
 });
 
