@@ -660,6 +660,7 @@ var Option = _react2['default'].createClass({
 				onTouchStart: this.handleTouchStart,
 				onTouchMove: this.handleTouchMove,
 				onTouchEnd: this.handleTouchEnd,
+				'aria-label': option.title,
 				id: instancePrefix + '-option-' + optionIndex,
 				title: option.title },
 			this.props.children

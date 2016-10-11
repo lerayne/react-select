@@ -78,13 +78,14 @@ const Option = React.createClass({
 		) : (
 			<div className={className}
 				style={option.style}
-				role="option"
-				 onMouseDown={this.handleMouseDown}
+				role="option" 
+				onMouseDown={this.handleMouseDown}
 				onMouseEnter={this.handleMouseEnter}
 				onMouseMove={this.handleMouseMove}
 				onTouchStart={this.handleTouchStart}
 				onTouchMove={this.handleTouchMove}
 				onTouchEnd={this.handleTouchEnd}
+				aria-label={option.title} 
 				id={instancePrefix + '-option-' + optionIndex}
 				title={option.title}>
 				{this.props.children}
