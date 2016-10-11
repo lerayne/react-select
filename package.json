@@ -53,6 +53,7 @@
   },
   "scripts": {
     "build": "gulp clean && NODE_ENV=production gulp build",
+    "build-win": "gulp clean && set NODE_ENV=production gulp build",
     "bump": "gulp bump",
     "bump:major": "gulp bump:major",
     "bump:minor": "gulp bump:minor",
