@@ -647,13 +647,13 @@ var Option = _react2['default'].createClass({
 			{ className: className,
 				style: option.style,
 				role: 'option',
+				'aria-label': option.title,
 				onMouseDown: this.handleMouseDown,
 				onMouseEnter: this.handleMouseEnter,
 				onMouseMove: this.handleMouseMove,
 				onTouchStart: this.handleTouchStart,
 				onTouchMove: this.handleTouchMove,
 				onTouchEnd: this.handleTouchEnd,
-				'aria-label': option.title,
 				id: instancePrefix + '-option-' + optionIndex,
 				title: option.title },
 			this.props.children
@@ -1891,7 +1891,8 @@ var Select = _react2['default'].createClass({
 						return _this5.input = ref;
 					},
 					'aria-readonly': '' + !!this.props.disabled,
-					style: { border: 0, width: 1, display: 'inline-block' } }));
+					style: { border: 0, width: 1, display: 'inline-block' }
+				}));
 			}
 
 			if (this.props.autosize) {

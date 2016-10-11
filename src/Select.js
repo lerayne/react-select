@@ -883,7 +883,8 @@ const Select = React.createClass({
 						onFocus={this.handleInputFocus}
 						ref={ref => this.input = ref}
 						aria-readonly={'' + !!this.props.disabled}
-						style={{ border: 0, width: 1, display:'inline-block' }}/>
+						style={{ border: 0, width: 1, display:'inline-block' }}
+					></div>
 				);
 			}
 
