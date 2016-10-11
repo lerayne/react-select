@@ -1858,7 +1858,9 @@ var Select = _react2['default'].createClass({
 					return _this8.wrapper = ref;
 				},
 				className: className,
-				style: this.props.wrapperStyle },
+				style: this.props.wrapperStyle,
+				onFocus: this.focus
+			},
 			this.renderHiddenField(valueArray),
 			_react2['default'].createElement(
 				'div',
