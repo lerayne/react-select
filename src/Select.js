@@ -267,9 +267,12 @@ const Select = React.createClass({
 	},
 
 	focus () {
+		console.log('!focus!1')
 		if (!this.input) return;
 		this.input.focus();
 
+		console.log('!focus!2')
+		
 		if (this.props.openAfterFocus) {
 			this.setState({
 				isOpen: true,
@@ -308,6 +311,15 @@ const Select = React.createClass({
 
 		// Clear the value
 		this.clearValue(event);
+	},
+
+	handleFocus(event){
+		console.log('focus!')
+		if (!this.state.isOpen){
+			this.setState({
+				isOpen: true
+			})
+		}
 	},
 
 	handleMouseDown (event) {
@@ -521,7 +533,6 @@ const Select = React.createClass({
 				this.focusStartOption();
 			break;
 			case 32: // space
-				console.log('space!')
 				if (!this.state.isOpen) {
 					this.setState({
 						isOpen: true

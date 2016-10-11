@@ -1230,8 +1230,11 @@ var Select = _react2['default'].createClass({
 	},
 
 	focus: function focus() {
+		console.log('!focus!1');
 		if (!this.input) return;
 		this.input.focus();
+
+		console.log('!focus!2');
 
 		if (this.props.openAfterFocus) {
 			this.setState({
@@ -1271,6 +1274,15 @@ var Select = _react2['default'].createClass({
 
 		// Clear the value
 		this.clearValue(event);
+	},
+
+	handleFocus: function handleFocus(event) {
+		console.log('focus!');
+		if (!this.state.isOpen) {
+			this.setState({
+				isOpen: true
+			});
+		}
 	},
 
 	handleMouseDown: function handleMouseDown(event) {
@@ -1495,7 +1507,6 @@ var Select = _react2['default'].createClass({
 				break;
 			case 32:
 				// space
-				console.log('space!');
 				if (!this.state.isOpen) {
 					this.setState({
 						isOpen: true
