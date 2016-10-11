@@ -646,7 +646,6 @@ var Option = _react2['default'].createClass({
 			'div',
 			{ className: className,
 				style: option.style,
-				role: 'option',
 				'aria-label': option.title,
 				onMouseDown: this.handleMouseDown,
 				onMouseEnter: this.handleMouseEnter,
@@ -654,8 +653,8 @@ var Option = _react2['default'].createClass({
 				onTouchStart: this.handleTouchStart,
 				onTouchMove: this.handleTouchMove,
 				onTouchEnd: this.handleTouchEnd,
-				id: instancePrefix + '-option-' + optionIndex,
-				title: option.title },
+				id: instancePrefix + '-option-' + optionIndex
+			},
 			this.props.children
 		);
 	}

@@ -78,7 +78,6 @@ const Option = React.createClass({
 		) : (
 			<div className={className}
 				 style={option.style}
-				 role="option"
 				 aria-label={option.title}
 				 onMouseDown={this.handleMouseDown}
 				 onMouseEnter={this.handleMouseEnter}
@@ -87,7 +86,7 @@ const Option = React.createClass({
 				 onTouchMove={this.handleTouchMove}
 				 onTouchEnd={this.handleTouchEnd}
 				 id={instancePrefix + '-option-' + optionIndex}
-				 title={option.title}>
+			>
 				 {this.props.children}
 			</div>
 		);
